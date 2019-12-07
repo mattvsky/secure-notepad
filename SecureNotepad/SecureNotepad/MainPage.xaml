@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SecureNotepad.MainPage">
+
+
+    <StackLayout
+        BackgroundColor="#333">
+        <!-- Place new controls here -->
+        <Grid
+            VerticalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30">
+                </ColumnDefinition>
+                <ColumnDefinition />
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="70"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="1"
+                x:Name="lblHeader"
+                FontSize="25"
+                FontAttributes="Bold"
+                   TextColor="#eee"
+                Text="Sign In" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Entry Grid.Row="2"
+                Grid.Column="1"
+                    TextColor="#eee"
+                    PlaceholderColor="#999"
+                x:Name="txtPassword"
+                Placeholder="Password" 
+                    IsPassword="True"
+                />
+            <Label
+                x:Name="lblError"
+                Grid.Column="1"
+                Grid.Row="3"
+                IsVisible="False"
+                Text="You shall not pass"
+                TextColor="Red" />
+            <Button Grid.Row="4"
+                Grid.Column="1"
+                    Margin="0,20,0,0"
+                Text="Sign in"
+                Clicked="SignIn"/>
+            <Button
+                Grid.Row="5"
+                Grid.Column="1"
+                Text="Reset"
+                Clicked="Reset" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

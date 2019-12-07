@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SecureNotepad.NotepadPage">
+    <ContentPage.Content>
+        <StackLayout
+                BackgroundColor="#333">
+            <Label Text="Enter your secret note"
+                FontSize="25" />
+
+            <Editor
+                Placeholder="Enter your text here.."
+                HeightRequest="300"
+                PlaceholderColor="#aaa"
+                TextColor="#eee"
+                x:Name="txtNote"/>
+
+            <Button
+                Text="Save and close"
+                Clicked="Save"
+                FontSize="20"
+                Margin="10"
+                Padding="20"/>
+            <Button
+                Text="Change password"
+                Clicked="ChangePassword"
+                FontSize="20"
+                Margin="10"
+                Padding="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
